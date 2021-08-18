@@ -18,22 +18,22 @@ let person3 = {
     }]
 }
 
-// console.log(Object.values(person3))
-// for (let i=0; i<Object.keys(person3).length; i++){
-//     let x = Object.values(person3)[i]
-//     if(Array.isArray(x)){
-//         for(let j=0; j<x.length; j++){
-//             if(typeof j=='array'){
-//                 console.log(Object.values(x)[j])
-//             }else{console.log(x[j])}
-             
-//         }
-//     }else{
-//         console.log(x)
-//     }
-// }
+console.log(Object.values(person3))
+for (let i=0; i<Object.keys(person3).length; i++){
+    let x = Object.values(person3)[i]
+    if(x.constructor == Object){
+        console.log(Object.values(x)[j])
+    }
+    else if(Array.isArray(x)){
+        for(let j=0; j<x.length; j++){
+            console.log(x[j])
+        }
+    }else{
+        console.log(x)
+    }
+}
 
-// console.log(Object.values(person3))
+console.log(Object.values(person3))
 
 
 //=======Exercise #2=========//
@@ -167,4 +167,4 @@ let pig_it = (text) => {
     console.log(finallist)
 }
 pig_it("O tempora o mores !") //function will only apply to letters
-pig_it("!")
+pig_it("Pig latin is cool")
